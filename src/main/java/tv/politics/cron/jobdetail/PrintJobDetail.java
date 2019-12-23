@@ -17,15 +17,12 @@ import tv.politics.cron.job.PrintJobSimpleRunner;
 
 @Configuration
 public class PrintJobDetail {
-	
-	@Bean
-	public JobDetail jobDetail() {
-	    return JobBuilder.newJob().ofType(PrintJobSimpleRunner.class)
-	      .storeDurably()
-	      .withIdentity("PrintJobDetail", "Group1")  
-	      .withDescription("Fire once PrintJob instance")
-	      .build();
-	    
-	}
 
+  @Bean
+  public JobDetail jobDetail() {
+    return JobBuilder.newJob().ofType(PrintJobSimpleRunner.class).storeDurably()
+        .withIdentity("PrintJobDetail", "Group1").withDescription("Fire once PrintJob instance")
+        .build();
+
+  }
 }

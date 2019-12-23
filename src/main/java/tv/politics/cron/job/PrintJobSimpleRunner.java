@@ -19,14 +19,14 @@ import tv.politics.cron.service.PrintJobService;
  */
 @Component
 public class PrintJobSimpleRunner implements Job {
-	
-	@Autowired 
-	private PrintJobService printJobService;
-	
-	public void execute(JobExecutionContext context) throws JobExecutionException {
-		
-		printJobService.printJob();
-		
-	}
+
+  @Autowired
+  private PrintJobService printJobService;
+
+  public void execute(JobExecutionContext context) throws JobExecutionException {
+
+    printJobService.printJob();
+
+  }
 
 }

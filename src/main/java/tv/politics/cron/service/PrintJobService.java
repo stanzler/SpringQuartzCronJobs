@@ -17,11 +17,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class PrintJobService {
 
-	private static final Logger LOG = LoggerFactory.getLogger(PrintJobService.class);
+  private static final Logger LOG = LoggerFactory.getLogger(PrintJobService.class);
 
-    public void printJob() {
-    	
-        LOG.info("Classic print job logic ... ");
-    }
+  public void printJob() {
+
+    LOG.info("Classic print job logic ... ");
+  }
 
 }

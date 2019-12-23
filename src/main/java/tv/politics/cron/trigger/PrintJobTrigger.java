@@ -19,13 +19,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class PrintJobTrigger {
-	
-	@Bean
-	public Trigger trigger(JobDetail job) {
-	    return TriggerBuilder.newTrigger().forJob(job)
-	      .withIdentity("PrintJobTrigger", "Group1")
-	      .withDescription("Schedule once trigger instance")
-	      .build();
-	}
+
+  @Bean
+  public Trigger trigger(JobDetail job) {
+    return TriggerBuilder.newTrigger().forJob(job).withIdentity("PrintJobTrigger", "Group1")
+        .withDescription("Schedule once trigger instance").build();
+  }
 
 }
